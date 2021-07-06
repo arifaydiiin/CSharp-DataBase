@@ -39,12 +39,7 @@ namespace DataAccess.Concrete.EntityFrameWork
             }
         }
 
-        public List<Product> Get(Func<Product, bool> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Product> GetAll(Func<Product, bool> filter = null)
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             using (NorthwindContext context = new NorthwindContext())
             {
@@ -53,10 +48,6 @@ namespace DataAccess.Concrete.EntityFrameWork
           
         }
 
-        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Update(Product product)
         {

@@ -44,7 +44,11 @@ namespace DataAccess.Concrete.InMemory
             return filter == null ? products : products.Where(filter).ToList();
         }
 
-    
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Product product)
         {
        

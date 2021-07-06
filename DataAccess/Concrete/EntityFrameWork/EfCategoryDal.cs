@@ -24,11 +24,10 @@ namespace DataAccess.Concrete.EntityFrameWork
             throw new NotImplementedException();
         }
 
-        public List<Category> GetAll(Func<Category, bool> filter = null)
+        public List<Category> GetAll(Expression<Func<Category, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
-
         public void Update(Category entity)
         {
             throw new NotImplementedException();

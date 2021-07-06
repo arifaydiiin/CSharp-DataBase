@@ -7,7 +7,7 @@ namespace Business.Abstract
 {
    public interface IProductService
     {
-       public List<Product> GetAll(Func<Product, bool> filter = null);
+       public List<Product> GetAll();
 
     }
 }

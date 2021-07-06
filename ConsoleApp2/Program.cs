@@ -9,13 +9,14 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            ProductManager productmanager = new ProductManager(new InMemoryProductDal());
-            
-            foreach (var item in productmanager.GetAll(p => p.ProductName =="Tabak"))
+            ProductManager productmanager = new ProductManager(new EfProductDal());
+            foreach (var item in productmanager.GetAll())
             {
                 Console.WriteLine(item.ProductName);
             }
-       
+         
+
+
         }
     }
 }

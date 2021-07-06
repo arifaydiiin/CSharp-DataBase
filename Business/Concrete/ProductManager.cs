@@ -21,11 +21,10 @@ namespace Business.Concrete
             this.productDal = productDal;
         }
 
-        public List<Product> GetAll(Func<Product,bool>filter=null)
+        public List<Product> GetAll()
         {
-            return productDal.GetAll(filter);
+            return productDal.GetAll();
         }
 
-      
     }
 }
